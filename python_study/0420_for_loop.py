@@ -198,3 +198,14 @@ for 변수 in iterable값:
 #     print("-----------------")
 
 
+# egg_list = range(1,4)
+# for i in egg_list:
+#     print( str(i)+":달걀을 삶습니다.")
+
+# count = [5,4,3,2,1]
+# for x in count:
+#     print(str(x),"!")
+
+
+
+        
