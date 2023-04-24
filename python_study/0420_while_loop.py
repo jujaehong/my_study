@@ -187,12 +187,21 @@ while 조건 :
 # scores = []
 # n = 0
 # while n < 5:
-#     score = int(input("시험점수:"))
-#     scores.append(score)
-#     n += 1
-# # print(scores) # 점수 5개 모두 입력시 한번에 출력
-#     print(scores) # 점수 입력때마다 출력
+    # score = int(input("시험점수:"))
+    # scores.append(score)
+    # n += 1
+# print(scores) # 점수 5개 모두 입력시 한번에 출력
+    # print(scores) # 점수 입력때마다 출력
 
+
+# for 반복문을 사용해서
+# scores 리스트에 시험 점수 5개를 
+# 정수형으로 입력받으세요.
+# scores = []
+# for i in range(0,5):
+#     score = int(input("시험 점수를 입력하세요: "))
+#     scores.append(score)
+# print(scores)
 
 
     # while 반복문을 사용하여
@@ -202,7 +211,6 @@ while 조건 :
 # while n < 10:
 #     print("2 *", n, "=", 2*n)
 #     n += 1
-
 
 
 
