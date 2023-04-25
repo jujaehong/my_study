@@ -382,3 +382,38 @@ def 함수이름(함수입력값):
 #             j += 1
 #         print()
 # print_stars(n)
+
+
+
+
+# 구구단 2단부터 9단까지
+# 이중 for문
+# i = int(input("몇단 ? :"))
+# for j in range(1, 10):
+#         print( f" {i} * {j} = {i*j}" )
+# print("-----------------")
+
+
+
+# 별코드
+
+# n = int(input("숫자? :"))
+# for i in range(n):
+#     print("*" * (i+1))
+
+# 역별코드
+# n = int(input("숫자? :"))
+# for i in range(n, 0, -1):
+#     print("*" * i)    
+
+# 마름모 별코드
+# n = int(input("숫자? :"))
+# for i in range(n):
+#     print(" " * (n-i-1) + "*" * (2*i+1))
+# for i in range(n-2, -1, -1):
+#     print(" " * (n-i-1) + "*" * (2*i+1)) 
+
+# 정사각형 별코드
+# n = int(input("숫자? :"))
+# for i in range(n):
+#     print("*" * n)
