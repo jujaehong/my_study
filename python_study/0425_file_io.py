@@ -149,28 +149,80 @@
 
 
 
+# def add(a, b):
+#     result = str(a)+" + "+str(b)+" = "+str(a+b)
+#     print(result)
+#     with open("python_study/calculator_result.txt" , "a", encoding="utf-8") as f:
+#         f.write(result+"\n")
+
+# def sub(a, b):
+#     result = str(a)+" - "+str(b)+" = "+str(a-b)
+#     print(result)
+#     with open("python_study/calculator_result.txt" , "a", encoding="utf-8") as f:
+#         f.write(result+"\n") 
+
+# def mul(a, b):
+#     result = str(a)+" * "+str(b)+" = "+str(a*b)
+#     print(result)
+#     with open("python_study/calculator_result.txt" , "a", encoding="utf-8") as f:
+#         f.write(result+"\n")
+# def dic(a, b):
+#     result = str(a)+" / "+str(b)+" = "+str(a/b)
+#     print(result)
+#     with open("python_study/calculator_result.txt" , "a", encoding="utf-8") as f:
+#         f.write(result+"\n")
+
+# while True:
+#     print("""
+#     계산기
+#     1: +
+#     2: -
+#     3: *
+#     4: /
+#     q:종료
+#     """)
+#     operator = input("원하는 계산을 입력하세요")
+#     if operator == 'q':
+#         break
+#     a = int(input("정수 1: "))
+#     b = int(input("정수 2: "))
+#     if operator == "1":
+#         add(a, b)
+        
+#     elif operator == "2":
+#         sub(a, b)
+        
+#     elif operator == "3":
+#         mul(a, b)
+        
+#     elif operator == "4":
+#         dic(a, b)
+
+
+# 포매팅 형식
+
 def add(a, b):
-    result = str(a)+" + "+str(b)+" = "+str(a+b)
+    result = "%d + %d = %d" % (a, b, a+b) # fommatting 형식
     print(result)
     with open("python_study/calculator_result.txt" , "a", encoding="utf-8") as f:
-        f.write(result)
+        f.write(result+"\n")
 
 def sub(a, b):
-    result = str(a)+" - "+str(b)+" = "+str(a-b)
+    result = "%d + %d = %d" % (a, b, a-b) # fommatting 형식
     print(result)
     with open("python_study/calculator_result.txt" , "a", encoding="utf-8") as f:
-        f.write(result)    
+        f.write(result+"\n") 
 
 def mul(a, b):
-    result = str(a)+" * "+str(b)+" = "+str(a*b)
+    result = "%d + %d = %d" % (a, b, a*b) # fommatting 형식
     print(result)
     with open("python_study/calculator_result.txt" , "a", encoding="utf-8") as f:
-        f.write(result)
+        f.write(result+"\n")
 def dic(a, b):
-    result = str(a)+" / "+str(b)+" = "+str(a/b)
+    result = "%d + %d = %d" % (a, b, a/b) # fommatting 형식
     print(result)
     with open("python_study/calculator_result.txt" , "a", encoding="utf-8") as f:
-        f.write(result)
+        f.write(result+"\n")
 
 while True:
     print("""
