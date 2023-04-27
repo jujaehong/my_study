@@ -154,30 +154,30 @@ class 클래스이름:
 
 # 상속 inheritance
 
-class Animal:
-    def __init__(self, name):
-        self.name = name
-        print(f"{self.name}가 생성되었습니다.")
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
+#         print(f"{self.name}가 생성되었습니다.")
 
-    def say(self):
-        print("")
+#     def say(self):
+#         print("")
 
-class Dog(Animal):
+# class Dog(Animal):
 
-# 메소드 재정의
-# method overriding 
-    def say(self):
-        print("멍멍")
+# # 메소드 재정의
+# # method overriding 
+#     def say(self):
+#         print("멍멍")
 
-my_dog = Dog("백구")
-my_dog.say()
+# my_dog = Dog("백구")
+# my_dog.say()
 
-class Cat(Animal):
-    def say(self):
-        print("야옹")
+# class Cat(Animal):
+#     def say(self):
+#         print("야옹")
 
-my_cat = Cat("고양이")
-my_cat.say()
+# my_cat = Cat("고양이")
+# my_cat.say()
 
 # class Student:
 #     def __init__(self, name, age, school, grade):
@@ -263,4 +263,25 @@ my_cat.say()
 
 
 
+
+# class MyClass:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+#     def say_hello(self):
+#         print(f" Hello, my name is {self.name} 이고 나이는 {self.age}입니다." )
+    
+#     def say_ages(self):
+#         print()    
+
+
+# my_instance1 = MyClass("홍길동", "21")
+# my_instance2 = MyClass("심청이", "31")
+# my_instance3 = MyClass("난쟁이", "41")
+# my_instance4 = MyClass("각설이", "88")
+# my_instance_li = [my_instance1, my_instance2, my_instance3, my_instance4]
+
+# for my_instance in my_instance_li:
+#     my_instance.say_hello()
 

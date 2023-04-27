@@ -94,52 +94,115 @@
 # 계산 결과가 100보다 크면 계산하지 않고 100 이하의
 # 결과가 나오는 값을 입력하도록 안내 메시지를 출력한다.
 
-from my_calculator import MyCalculator 
 
-class MaxLimitCalculator(MyCalculator):
-    
-    def add(self, num1, num2):
-        if num1 > 100 or num2 > 100:
-            print("100 이하의 값을 입력하세요.")
-            return None
-        result = super().add(num1, num2)
-        if result > 100:
-            print("100 이하의 결과를 얻을 수 있는 값을 입력하세요.")
-            return None
-        return result
-    
-    def sub(self, num1, num2):
-        if num1 > 100 or num2 > 100:
-            print("100 이하의 값을 입력하세요.")
-            return None
-        result = super().sub(num1, num2)
-        if result > 100:
-            print("100 이하의 결과를 얻을 수 있는 값을 입력하세요.")
-            return None
-        return result
-    
-    def mul(self, num1, num2):
-        if num1 > 100 or num2 > 100:
-            print("100 이하의 값을 입력하세요.")
-            return None
-        result = super().mul(num1, num2)
-        if result > 100:
-            print("100 이하의 결과를 얻을 수 있는 값을 입력하세요.")
-            return None
-        return result
-    
-    def div(self, num1, num2):
-        if num1 > 100 or num2 > 100:
-            print("100 이하의 값을 입력하세요.")
-            return None
-        if num2 == 0:
-            print("0으로 나눌 수 없습니다.")
-            return None
-        result = super().div(num1, num2)
-        if result > 100:
-            print("100 이하의 결과를 얻을 수 있는 값을 입력하세요.")
-            return None
-        return result
-max_calc = MaxLimitCalculator()
+# 방법1
 
-print(max_calc.sub(150, 0))
+# from my_calculator import MyCalculator 
+
+# class MaxLimitCalculator(MyCalculator):
+
+#     def add(self, n1, n2):
+#         if n1 > 100:
+#             print("100보다 작은수를 입력하세요.")
+#         elif n2 > 100:
+#             print("100보다 작은수를 입력하세요.")
+#         else:
+#             result = n1 + n2
+#             if result > 100:
+#                 print("계산결과가 100보다 작아야합니다.")      
+#             else:
+#                 print(f"{n1} + {n2} = {n1 + n2}")
+
+#     def sub(self, n1, n2):
+#         if n1 > 100:
+#             print("100보다 작은수를 입력하세요.")
+#         elif n2 > 100:
+#             print("100보다 작은수를 입력하세요.")
+#         else:
+#             result = n1 - n2
+#             if result > 100:
+#                 print("계산결과가 100보다 작아야합니다.")      
+#             else:
+#                 print(f"{n1} - {n2} = {n1 - n2}")
+
+#     def mul(self, n1, n2):
+#         if n1 > 100:
+#             print("100보다 작은수를 입력하세요.")
+#         elif n2 > 100:
+#             print("100보다 작은수를 입력하세요.")
+#         else:
+#             result = n1 * n2
+#             if result > 100:
+#                 print("계산결과가 100보다 작아야합니다.")      
+#             else:
+#                 print(f"{n1} * {n2} = {n1 * n2}")
+
+#     def div(self, n1, n2):
+#         if n1 > 100:
+#             print("100보다 작은수를 입력하세요.")
+#         elif n2 > 100:
+#             print("100보다 작은수를 입력하세요.")
+#         elif n2 == 0:
+#             print("0으로 나눌 수 없습니다.")    
+#         else:
+#             result = n1 / n2
+#             if result > 100:
+#                 print("계산결과가 100보다 작아야합니다.")      
+#             else:
+#                 print(f"{n1} / {n2} = {n1 / n2}")
+
+# my_max_limt_calculator = MaxLimitCalculator()
+# my_max_limt_calculator.add(200,200)
+
+
+
+# 방법2 (chat gpt 답)
+# from my_calculator import MyCalculator 
+
+# class MaxLimitCalculator(MyCalculator):
+    
+#     def add(self, num1, num2):
+#         if num1 > 100 or num2 > 100:
+#             print("100 이하의 값을 입력하세요.")
+#             return None
+#         result = super().add(num1, num2)
+#         if result > 100:
+#             print("100 이하의 결과를 얻을 수 있는 값을 입력하세요.")
+#             return None
+#         return result
+    
+#     def sub(self, num1, num2):
+#         if num1 > 100 or num2 > 100:
+#             print("100 이하의 값을 입력하세요.")
+#             return None
+#         result = super().sub(num1, num2)
+#         if result > 100:
+#             print("100 이하의 결과를 얻을 수 있는 값을 입력하세요.")
+#             return None
+#         return result
+    
+#     def mul(self, num1, num2):
+#         if num1 > 100 or num2 > 100:
+#             print("100 이하의 값을 입력하세요.")
+#             return None
+#         result = super().mul(num1, num2)
+#         if result > 100:
+#             print("100 이하의 결과를 얻을 수 있는 값을 입력하세요.")
+#             return None
+#         return result
+    
+#     def div(self, num1, num2):
+#         if num1 > 100 or num2 > 100:
+#             print("100 이하의 값을 입력하세요.")
+#             return None
+#         if num2 == 0:
+#             print("0으로 나눌 수 없습니다.")
+#             return None
+#         result = super().div(num1, num2)
+#         if result > 100:
+#             print("100 이하의 결과를 얻을 수 있는 값을 입력하세요.")
+#             return None
+#         return result
+# max_calc = MaxLimitCalculator()
+
+# print(max_calc.div(100, 0))
