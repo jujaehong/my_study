@@ -106,23 +106,23 @@
 
 
 # 네이버 IT/과학 뉴스 크롤링
-# import requests
-# from bs4 import BeautifulSoup
-# import os
-# url = "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=105"
-# # headers={"User-Agent":"Mozilla/5.0"} ---> 크롤링 방지 회피
-# response = requests.get(url, headers={"User-Agent":"Mozilla/5.0"})
-# html = response.text
-# soup = BeautifulSoup(html, "html.parser")
-# div = soup.body.find('div', attrs={'class': 'list_body'})
-# headlines = div.find_all('a', attrs={'class': 'cluster_text_headline'})
+import requests
+from bs4 import BeautifulSoup
+import os
+url = "https://news.naver.com/main/main.naver?mode=LSD&mid=shm&sid1=105"
+# headers={"User-Agent":"Mozilla/5.0"} ---> 크롤링 방지 회피
+response = requests.get(url, headers={"User-Agent":"Mozilla/5.0"})
+html = response.text
+soup = BeautifulSoup(html, "html.parser")
+div = soup.body.find('div', attrs={'class': 'list_body'})
+headlines = div.find_all('a', attrs={'class': 'cluster_text_headline'})
 
 
-# folder_name = "crawling_result"
-# if not os.path.exists(folder_name):
-#     os.mkdir(folder_name)
+folder_name = "crawling_result"
+if not os.path.exists(folder_name):
+    os.mkdir(folder_name)
 
-# for headline in headlines:
+for headline in headlines:
 
     # 과제 : crawling_result 폴더의 headlines.txt 파일에 저장
     # headlines.txt 파일에 저장하기
@@ -133,9 +133,9 @@
     #     f.write(headline.text.strip())
     #     f.write("\n")
 
-    # article_response = requests.get(headline['href'])
-    # article_soup = BeautifulSoup(article_response.text, "html.parser")
-    # article = article_soup.find('div', attrs={"id":"dic_area"})
-    # print(article.text)
+    article_response = requests.get(headline['href'])
+    article_soup = BeautifulSoup(article_response.text, "html.parser")
+    article = article_soup.find('div', attrs={"id":"dic_area"})
+    print(article.text)
 
 

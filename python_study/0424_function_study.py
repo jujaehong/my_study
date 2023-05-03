@@ -417,3 +417,27 @@ def 함수이름(함수입력값):
 # n = int(input("숫자? :"))
 # for i in range(n):
 #     print("*" * n)
+
+
+# word = ["school", "game", "piano", "science", "hotel", "mountain"]
+# a = list()
+# for i in range(len(word)):
+#     if len(word[i])>=6:
+#         a.append(word[i])
+# print(a)
+
+b = int(input('정수를 입력하세요.'))
+if b<=0:
+    print('음수는 정의하지 않음.')
+else:    
+    for a in range(1,b+1):
+        if a%3==0 and a%5==0:
+            print('3과 5의 공배수')
+        elif a%3==0:
+            print('3의 배수')
+        elif a%5==0:
+            print('5의 배수')
+        elif 1<=a<=100:
+            print(a)
+        else:
+            print('1과 100사이 숫자가 아닙니다.')
